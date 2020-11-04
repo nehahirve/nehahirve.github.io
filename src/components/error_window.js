@@ -2,6 +2,9 @@ import React from 'react'
 import ErrorButton from './error_button'
 
 export default function ErrorWindow(props) {
+  const errorButtonList = props.buttonText.map(button => {
+    return <ErrorButton buttonText={button} />
+  })
   return (
     <section
       className={`error-window ${props.id}`}
@@ -35,7 +38,7 @@ export default function ErrorWindow(props) {
           </div>
           <p>{props.innerText}</p>
         </div>
-        <ErrorButton buttonText={props.buttonText} />
+        <div className="error-buttons">{errorButtonList}</div>
       </div>
     </section>
   )

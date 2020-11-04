@@ -25,9 +25,6 @@ a {
   position: relative;
   background: $lightgrey;
   width: 100vw;
-  //height: 200rem;
-  // margin: auto;
-  // margin-top: 2rem;
   background-size: 1.98rem 1.98rem;
   background-image:
     linear-gradient(to right, $black 1px, transparent 1px),
@@ -195,6 +192,11 @@ a {
 }
 
 
+.error-buttons {
+  display: flex;
+  margin: auto;
+  width: 70%;
+}
 
 .error-enter {
   background: $darkgrey;
@@ -221,8 +223,14 @@ a {
   top: -10rem;
 }
 
+.error-three {
+  position: relative;
+  left: 4vw;
+}
+
 .nine {
   margin: auto;
+  margin-bottom: 3.4rem;
   left: 20vw;
   .window-content{
     top: -1rem;
