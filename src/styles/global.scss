@@ -1,9 +1,11 @@
 $black: #000;
 $lightgrey: #D9DAD2;
+$darkgrey: #BDBEB6;
 $yellow: #F0B408;
 $red: #E84540;
 $green: #00822A;
 $blue: #015EAC;
+$shadow: rgba(0, 0, 0, 0.4);
 
 html {
   background:$lightgrey;
@@ -28,7 +30,7 @@ li {
 }
 
 .window-frame {
-  box-shadow: -10px 10px 0 rgba(0, 0, 0, 0.4);
+  box-shadow: -10px 10px 0 $shadow;
   border: 1px solid $black;
   position: relative;
   //background-color: yellow;
@@ -118,12 +120,112 @@ li {
 
 .eight {
   margin: auto;
+  margin-bottom: 4rem;
   .window-content{
     overflow-y: scroll;
     line-height: 0.95;
   }
 }
+.error-window {
+  box-shadow: -10px 10px 0 $shadow;
+  background: $darkgrey;
+  padding-bottom: 2rem;
+  font-family: 'Silom';
+  border: 1px solid;
+  
+  .error-navbar {
+    background: $blue;
+    border-bottom: 1px solid;
+    height: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .error-title {
+      color: white;
+      font-size: 0.7rem;
+      padding-left: 1rem;
+
+    }
+    .error-close {
+      height: 1.3rem;
+      width: 1.3rem;
+      margin-right: 0.1rem;
+      background: $darkgrey;
+      border-radius: none;
+      border: none;
+      border: 1px solid;
+    }
+  }
+  .error-window-content {
+    .error-top-content {
+      padding: 1rem;
+      padding-top: 2rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: auto;
+    }
+    p {
+      width: 50%;
+      padding-left: 1rem;
+    }
+  }
+}
+
+.error-cross {
+  box-shadow: -2px 2px 0 $shadow;
+  width: 3rem;
+  height: 3rem;
+  background: $red;
+  border-radius: 50%;
+  border: 1px solid;
+  .cross {
+    position: relative;
+    left: 25%;
+    top: 25%;
+    width: 50%;
+    height: 50%;
+  } 
+}
 
 
 
+.error-enter {
+  background: $darkgrey;
+  font-family: 'Silom';
+  border-radius: none;
+  border: none;
+  border: 1px solid;
+  padding: 0.4rem;
+  margin: auto;
+  display: flex;
+  box-shadow: -2px 2px 0 $shadow;
+}
+
+.error-one {
+  position: relative;
+  left: 60vw;
+  top: -20rem;
+  margin-bottom: -10rem;
+}
+
+.error-two {
+  position: relative;
+  left: 70vw;
+  top: -10rem;
+}
+
+.nine {
+  margin: auto;
+  left: 20vw;
+}
+
+canvas {
+  border: 2px solid;
+  width: calc(70rem - 10px);
+  height: calc(40rem - 2px);
+  position: relative;
+  background-color: $darkgrey;
+  opacity: 0.6;
+}
 

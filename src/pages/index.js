@@ -1,5 +1,6 @@
 import React from 'react'
 import WindowFrame from '../components/window_frame'
+import ErrorWindow from '../components/error_window'
 import Draggable from 'react-draggable'
 
 export default function Home() {
@@ -37,6 +38,14 @@ export default function Home() {
         height="31rem"
         windowHeading="CRASH.exe"
       />
+
+      <ErrorWindow
+        id={'error-one'}
+        errorName="Error!"
+        innerText="What is the nature of reality?"
+        buttonText="IDK"
+        width="20rem"
+      ></ErrorWindow>
 
       <WindowFrame
         id={'four'}
@@ -76,6 +85,15 @@ export default function Home() {
           windowHeading="WORK.txt"
         />
       </section>
+
+      <ErrorWindow
+        id={'error-two'}
+        errorName="Not an Error!"
+        innerText="I even made this JAMStack site with Gatsby 0_0"
+        buttonText="MUCH WOW"
+        width="25rem"
+      ></ErrorWindow>
+
       <WindowFrame
         id={'eight'}
         color={'#00822A'}
@@ -85,12 +103,18 @@ export default function Home() {
         fontSize="3.6rem"
         width="80vw"
         height="25rem"
-        windowHeading="WORK.txt"
+        windowHeading="about.me"
       />
 
-      <section>
-        <p>Heck, I even made this JAMStack site with Gatsby (he’s Great!)</p>
-      </section>
+      <WindowFrame
+        id={'nine'}
+        color={'#E84540'}
+        innerText={`Now here’s some Tetris so you never have to leave!`}
+        fontSize="1rem"
+        width="20rem"
+        height="15rem"
+        windowHeading="about.me"
+      />
 
       <section>
         <p>
@@ -104,9 +128,7 @@ export default function Home() {
           <li>Email</li>
         </ul>
       </section>
-      <section>
-        <p>Now here’s some Tetris so you never have to leave my website!</p>
-      </section>
+      <canvas></canvas>
     </div>
   )
 }

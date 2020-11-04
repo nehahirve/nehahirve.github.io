@@ -6,7 +6,7 @@ export default function WindowFrame(props) {
       style={{
         backgroundColor: props.color,
         height: props.height,
-        width: props.width,
+        maxWidth: props.width,
       }}
     >
       <div className="navbar">
