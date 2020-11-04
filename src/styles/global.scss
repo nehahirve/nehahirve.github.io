@@ -16,6 +16,11 @@ li {
   text-decoration: underline;
 }
 
+a {
+  text-decoration: underline;
+  color: inherit;
+}
+
 .background {
   position: relative;
   background: $lightgrey;
@@ -73,6 +78,7 @@ li {
     height: calc(100% - 2.5rem);
     padding: 2rem 1rem 0 3rem;
     line-height: 0.84;
+    position: relative;
   }
 }
 
@@ -218,6 +224,9 @@ li {
 .nine {
   margin: auto;
   left: 20vw;
+  .window-content{
+    top: -1rem;
+  }
 }
 
 canvas {
@@ -227,5 +236,9 @@ canvas {
   position: relative;
   background-color: $darkgrey;
   opacity: 0.6;
+}
+
+.windows img {
+  width: 100%;
 }
 

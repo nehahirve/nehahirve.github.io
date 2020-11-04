@@ -1,6 +1,8 @@
 import React from 'react'
 import WindowFrame from '../components/window_frame'
 import ErrorWindow from '../components/error_window'
+import Gif from '../components/gif'
+import Devil from '../components/devil'
 import Draggable from 'react-draggable'
 
 export default function Home() {
@@ -21,7 +23,14 @@ export default function Home() {
       <WindowFrame
         id={'two'}
         color={'#00822A'}
-        innerText={`I used to be a visual storyteller and sometimes-indie-poster-maker.`}
+        innerText={
+          <>
+            I used to be a{' '}
+            <a href="https://nehahirve.github.io/">visual storyteller</a> and
+            sometimes-
+            <a href="https://lavamousestudios.com/">indie-poster-maker</a>.
+          </>
+        }
         fontSize="4.3rem"
         width="35rem"
         height="31rem"
@@ -31,12 +40,16 @@ export default function Home() {
       <WindowFrame
         id={'three'}
         color={'#015EAC'}
-        innerText={`But then 2020 broke stuff.`}
-        gif={true}
+        innerText={
+          <>
+            But then 2020 broke stuff.
+            <Gif />
+          </>
+        }
         fontSize="4.3rem"
         width="35rem"
         height="31rem"
-        windowHeading="CRASH.exe"
+        windowHeading="COVID.exe"
       />
 
       <ErrorWindow
@@ -109,11 +122,18 @@ export default function Home() {
       <WindowFrame
         id={'nine'}
         color={'#E84540'}
-        innerText={`Now here’s some Tetris so you never have to leave!`}
+        innerText={
+          <>
+            Now here’s some Tetris so you never have to leave!
+            <br />
+            <br />
+            <Devil />
+          </>
+        }
         fontSize="1rem"
         width="20rem"
         height="15rem"
-        windowHeading="about.me"
+        windowHeading="LOL.jk"
       />
 
       <section>

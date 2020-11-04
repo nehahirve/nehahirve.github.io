@@ -14,6 +14,10 @@ module.exports = {
             family: `Prata`,
             variants: [`400`],
           },
+          {
+            family: `Input Mono`,
+            variants: [`400`],
+          },
         ],
       },
     },

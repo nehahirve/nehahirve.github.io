@@ -1,4 +1,6 @@
 import React from 'react'
+import ErrorButton from './error_button'
+
 export default function ErrorWindow(props) {
   return (
     <section
@@ -27,14 +29,13 @@ export default function ErrorWindow(props) {
                 d="M 15.99 14.54C 15.99 14.54 14.54 15.99 14.54 15.99 14.54 15.99 8 9.45 8 9.45 8 9.45 1.46 15.99 1.46 15.99 1.46 15.99 0.01 14.54 0.01 14.54 0.01 14.54 6.55 8 6.55 8 6.55 8 0.01 1.46 0.01 1.46 0.01 1.46 1.46 0.01 1.46 0.01 1.46 0.01 8 6.55 8 6.55 8 6.55 14.54 0.01 14.54 0.01 14.54 0.01 15.99 1.46 15.99 1.46 15.99 1.46 9.45 8 9.45 8 9.45 8 15.99 14.54 15.99 14.54Z"
                 fill="white"
                 stroke="white"
-                stroke-width="0.3"
+                strokeWidth="0.3"
               />
             </svg>
           </div>
           <p>{props.innerText}</p>
         </div>
-
-        <button className="error-enter">{props.buttonText}</button>
+        <ErrorButton buttonText={props.buttonText} />
       </div>
     </section>
   )

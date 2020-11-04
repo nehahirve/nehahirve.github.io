@@ -17,8 +17,8 @@ export default function WindowFrame(props) {
           <div className="bars"></div>
         </div>
       </div>
-      <div className="window-content">
-        <p style={{ fontSize: props.fontSize }}>{props.innerText}</p>
+      <div className="window-content" style={{ fontSize: props.fontSize }}>
+        {props.innerText}
       </div>
     </section>
   )
