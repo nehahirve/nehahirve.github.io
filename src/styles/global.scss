@@ -1,3 +1,129 @@
+$black: #000;
+$lightgrey: #D9DAD2;
+$yellow: #F0B408;
+$red: #E84540;
+$green: #00822A;
+$blue: #015EAC;
+
 html {
-  background:lavender;
+  background:$lightgrey;
+  font-family: 'Prata';
+  overflow-x: hidden;
 }
+li {
+  text-decoration: underline;
+}
+
+.background {
+  position: relative;
+  background: $lightgrey;
+  width: 100vw;
+  //height: 200rem;
+  // margin: auto;
+  // margin-top: 2rem;
+  background-size: 1.98rem 1.98rem;
+  background-image:
+    linear-gradient(to right, $black 1px, transparent 1px),
+    linear-gradient(to bottom, $black 1px, transparent 1px);
+}
+
+.window-frame {
+  box-shadow: -10px 10px 0 rgba(0, 0, 0, 0.4);
+  border: 1px solid $black;
+  position: relative;
+  //background-color: yellow;
+  .navbar {
+    margin: 0;
+    cursor: move;
+    background: $lightgrey;
+    font-family: 'Silom';
+    height: 2.5rem;
+    border-bottom: 0.1rem solid $black;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    .close {
+      background: $red;
+      margin-left: 1rem;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      border: 0.1rem solid $black;
+      cursor: pointer;
+      &:focus {
+        outline: none
+        
+      }
+    }
+    .title {
+      display: flex;
+      justify-content: space-evenly;
+      width: 100%;
+      .bars {
+        border-top: 1px solid;
+        border-bottom: 1px solid;
+        width: 30%;
+        height: 0.8rem;
+      }
+    }
+  }
+  .window-content {
+    height: calc(100% - 2.5rem);
+    padding: 2rem 1rem 0 3rem;
+    line-height: 0.84;
+  }
+}
+
+.one {
+  top: 5rem;
+  margin: auto;
+  margin-bottom: 8rem;
+  left: -15vw;
+}
+
+.two {
+  margin: auto;
+  margin-bottom: 2rem;
+  left: 15vw;
+}
+
+.three {
+  margin: auto;
+  margin-bottom: 5rem;
+  left: -12vw;
+  .window-content {
+    color: white;
+  }
+}
+
+.four {
+  margin: auto;
+  left: 5vw;
+  margin-bottom: 5rem;
+  .window-content {
+    line-height: 0.95;
+  }
+}
+
+#work {
+  display: flex;
+  justify-content: space-between;
+  width: 80vw;
+  margin-left: 5vw;
+  margin-bottom: 20rem;
+}
+.six {
+  top: 15rem;
+}
+
+.eight {
+  margin: auto;
+  .window-content{
+    overflow-y: scroll;
+    line-height: 0.95;
+  }
+}
+
+
+
+

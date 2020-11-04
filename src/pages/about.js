@@ -1,11 +1,10 @@
 import React from 'react'
-import Header from '../components/header.js'
+import Container from '../components/container'
 export default function About() {
   return (
-    <div style={{ color: `teal` }}>
-      <Header headerText="About Gatsby." />
-      <Header headerText="It's pretty cool." />
-      <p>Such wow. Very React.</p>
-    </div>
+    <Container>
+      <h1>About CSS Modules</h1>
+      <p>CSS Modules are cool</p>
+    </Container>
   )
 }
