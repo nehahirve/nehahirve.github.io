@@ -10,6 +10,7 @@ export default function Home() {
   const red = '#E84540'
   const blue = '#015EAC'
   const green = '#00822A'
+
   return (
     <div className="background">
       <Draggable handle=".title">
@@ -22,6 +23,20 @@ export default function Home() {
             width="35rem"
             height="31rem"
             windowHeading="INTRO.txt"
+          />
+        </div>
+      </Draggable>
+
+      <Draggable handle=".title">
+        <div className="box no-cursor">
+          <WindowFrame
+            id={'p5'}
+            color={'black'}
+            innerText={''}
+            fontSize="4.3rem"
+            width="25rem"
+            height="25rem"
+            windowHeading="P5.js"
           />
         </div>
       </Draggable>
