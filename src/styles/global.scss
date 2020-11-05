@@ -145,6 +145,7 @@ a {
   border: 1px solid;
   
   .error-navbar {
+    cursor: move;
     background: $blue;
     border-bottom: 1px solid;
     height: 1.5rem;
@@ -204,9 +205,11 @@ a {
   display: flex;
   margin: auto;
   width: 70%;
+  
 }
 
 .error-enter {
+  cursor: pointer;
   background: $darkgrey;
   font-family: 'Silom';
   border-radius: none;

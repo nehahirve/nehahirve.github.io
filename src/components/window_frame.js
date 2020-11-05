@@ -11,7 +11,7 @@ export default function WindowFrame(props) {
       }}
     >
       <div className="navbar">
-        <button className="close"></button>
+        <button className="close" onClick={props.onWindowClose}></button>
         <div className="title">
           <div className="bars"></div>
           <h1>{props.windowHeading}</h1>

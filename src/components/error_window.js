@@ -1,10 +1,27 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import ErrorButton from './error_button'
 
 export default function ErrorWindow(props) {
+  let [innerText, setText] = useState(props.innerText)
+
+  function clickHandler(e) {
+    e.preventDefault()
+    if (e.target.textContent === 'LINKEDIN') {
+      setText(`Workin' on it...`)
+      console.log(innerText)
+    } else if (e.target.textContent === 'GITHUB') {
+      window.location = 'https://github.com/nehahirve/'
+    } else if (e.target.textContent === 'INSTA') {
+      window.location = 'https://www.instagram.com/nehahirve/'
+    } else if (e.target.textContent === 'EMAIL') {
+      setText('neha.s.hirve@gmail.com')
+    }
+  }
+
   const errorButtonList = props.buttonText.map(button => {
-    return <ErrorButton buttonText={button} />
+    return <ErrorButton buttonText={button} onClick={clickHandler} />
   })
+
   return (
     <section
       className={`error-window ${props.id}`}
@@ -36,7 +53,7 @@ export default function ErrorWindow(props) {
               />
             </svg>
           </div>
-          <p>{props.innerText}</p>
+          <p>{innerText}</p>
         </div>
         <div className="error-buttons">{errorButtonList}</div>
       </div>
