@@ -1,6 +1,16 @@
 import React from 'react'
+import { loadableP5 as P5Wrapper } from './loadable'
+import Sketch from './sketch'
 
 export default function WindowFrame(props) {
+  let windowContent = (
+    <div className="window-content" style={{ fontSize: props.fontSize }}>
+      {props.innerText}
+    </div>
+  )
+  if (props.id === 'p5') {
+    windowContent = <P5Wrapper sketch={Sketch} />
+  }
   return (
     <section
       className={`window-frame ${props.id}`}
@@ -18,9 +28,7 @@ export default function WindowFrame(props) {
           <div className="bars"></div>
         </div>
       </div>
-      <div className="window-content" style={{ fontSize: props.fontSize }}>
-        {props.innerText}
-      </div>
+      {windowContent}
     </section>
   )
 }

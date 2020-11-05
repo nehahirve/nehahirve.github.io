@@ -1,7 +1,8 @@
 import React from 'react'
 import Draggable from 'react-draggable'
+import { Resizable, ResizableBox } from 'react-resizable'
 import ToggleableWindowFrame from '../components/toggleable_window_frame'
-import ErrorWindow from '../components/error_window'
+import ErrorWindowList from '../components/error_window_list'
 import Gif from '../components/gif'
 import Devil from '../components/devil'
 
@@ -27,6 +28,7 @@ export default function Home() {
           />
         </div>
       </Draggable>
+
       <Draggable handle=".title">
         <div className="box no-cursor">
           <ToggleableWindowFrame
@@ -34,8 +36,8 @@ export default function Home() {
             color={'black'}
             innerText={''}
             fontSize="4.3rem"
-            width="25rem"
-            height="25rem"
+            width="25vw"
+            height="27.2vw"
             windowHeading="P5.js"
             isOpen={true}
           />
@@ -85,17 +87,14 @@ export default function Home() {
           />
         </div>
       </Draggable>
-      <Draggable handle=".error-navbar">
-        <div className="box no-cursor">
-          <ErrorWindow
-            id={'error-one'}
-            errorName="Error!"
-            innerText="What is the nature of reality?"
-            buttonText={['IDK']}
-            width="20rem"
-          ></ErrorWindow>
-        </div>
-      </Draggable>
+
+      <ErrorWindowList
+        id={'error-one'}
+        errorName="Error!"
+        innerText="What is the nature of reality?"
+        buttonText={['IDK']}
+        width="20rem"
+      />
       <Draggable handle=".title">
         <div className="box no-cursor">
           <ToggleableWindowFrame
@@ -184,17 +183,14 @@ export default function Home() {
           </div>
         </Draggable>
       </section>
-      <Draggable handle=".error-navbar">
-        <div className="box no-cursor">
-          <ErrorWindow
-            id={'error-two'}
-            errorName="Not an Error!"
-            innerText="I even made this JAMStack site with Gatsby 0_0"
-            buttonText={['MUCH WOW']}
-            width="25rem"
-          ></ErrorWindow>
-        </div>
-      </Draggable>
+
+      <ErrorWindowList
+        id={'error-two'}
+        errorName="Not an Error!"
+        innerText="I even made this JAMStack site with Gatsby 0_0"
+        buttonText={['MUCH WOW']}
+        width="25rem"
+      />
       <Draggable handle=".title">
         <div className="box no-cursor">
           <ToggleableWindowFrame
@@ -227,18 +223,16 @@ export default function Home() {
           />
         </div>
       </Draggable>
-      <Draggable handle=".error-navbar">
-        <div className="box no-cursor">
-          <ErrorWindow
-            id={'error-three'}
-            errorName="Anyway, please hire me (or just be my friend)!"
-            innerText="I don’t bite unless
+
+      <ErrorWindowList
+        id={'error-three'}
+        errorName="Anyway, please hire me (or just be my friend)!"
+        innerText="I don’t bite unless
         it’s the full moon."
-            buttonText={['GITHUB', 'LINKEDIN', 'INSTA', 'EMAIL']}
-            width="30rem"
-          ></ErrorWindow>
-        </div>
-      </Draggable>
+        buttonText={['GITHUB', 'LINKEDIN', 'INSTA', 'EMAIL']}
+        width="30rem"
+      />
+
       <Draggable handle=".title">
         <div className="box no-cursor">
           <ToggleableWindowFrame
@@ -260,7 +254,7 @@ export default function Home() {
           />
         </div>
       </Draggable>
-      <canvas></canvas>
+      <canvas className="tetris"></canvas>
     </div>
   )
 }

@@ -15,6 +15,10 @@ export default function ErrorWindow(props) {
       window.location = 'https://www.instagram.com/nehahirve/'
     } else if (e.target.textContent === 'EMAIL') {
       setText('neha.s.hirve@gmail.com')
+    } else if (e.target.textContent === 'IDK') {
+      props.onIDKClick()
+    } else if (e.target.textContent === 'MUCH WOW') {
+      window.location = 'https://www.gatsbyjs.com/'
     }
   }
 
@@ -27,6 +31,8 @@ export default function ErrorWindow(props) {
       className={`error-window ${props.id}`}
       style={{
         maxWidth: props.width,
+        left: props.randomMoverLeft,
+        top: props.randomMoverTop,
       }}
     >
       <div className="error-navbar">

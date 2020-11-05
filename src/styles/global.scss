@@ -11,6 +11,8 @@ html {
   background:$lightgrey;
   font-family: 'Prata';
   overflow-x: hidden;
+
+  
 }
 li {
   text-decoration: underline;
@@ -222,7 +224,7 @@ a {
 }
 
 .error-one {
-  position: relative;
+  position: absolute;
   left: 60vw;
   top: -20rem;
   margin-bottom: -10rem;
@@ -248,7 +250,7 @@ a {
   }
 }
 
-canvas {
+.tetris {
   border: 2px solid;
   width: calc(70rem - 10px);
   height: calc(40rem - 2px);
@@ -260,4 +262,3 @@ canvas {
 .windows img {
   width: 100%;
 }
-
