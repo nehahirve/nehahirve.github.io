@@ -1,8 +1,11 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import ErrorButton from './error_button'
 
 export default function ErrorWindow(props) {
   let [innerText, setText] = useState(props.innerText)
+  let [closed, setClosed] = useState(false)
+  let [height, setHeight] = useState('0px')
+  let [width, setWidth] = useState('0px')
 
   function clickHandler(e) {
     e.preventDefault()
@@ -22,47 +25,67 @@ export default function ErrorWindow(props) {
     }
   }
 
+  function closeWindow(e) {
+    setHeight(e.target.parentNode.parentNode.offsetHeight)
+    setWidth(e.target.parentNode.parentNode.offsetWidth)
+    console.log(height, width)
+    setClosed(true)
+  }
+
   const errorButtonList = props.buttonText.map(button => {
     return <ErrorButton buttonText={button} onClick={clickHandler} />
   })
 
-  return (
-    <section
-      className={`error-window ${props.id}`}
-      style={{
-        maxWidth: props.width,
-        left: props.randomMoverLeft,
-        top: props.randomMoverTop,
-      }}
-    >
-      <div className="error-navbar">
-        <div className="error-title">
-          <h1>{props.errorName}</h1>
-        </div>
-        <button className="error-close"></button>
-      </div>
-      <div className="error-window-content">
-        <div className="error-top-content">
-          <div className="error-cross">
-            <svg
-              className="cross"
-              xmlns="http://www.w3.org/2000/svg"
-              width="16px"
-              height="16px"
-              viewBox="0 0 16 16"
-            >
-              <path
-                d="M 15.99 14.54C 15.99 14.54 14.54 15.99 14.54 15.99 14.54 15.99 8 9.45 8 9.45 8 9.45 1.46 15.99 1.46 15.99 1.46 15.99 0.01 14.54 0.01 14.54 0.01 14.54 6.55 8 6.55 8 6.55 8 0.01 1.46 0.01 1.46 0.01 1.46 1.46 0.01 1.46 0.01 1.46 0.01 8 6.55 8 6.55 8 6.55 14.54 0.01 14.54 0.01 14.54 0.01 15.99 1.46 15.99 1.46 15.99 1.46 9.45 8 9.45 8 9.45 8 15.99 14.54 15.99 14.54Z"
-                fill="white"
-                stroke="white"
-                strokeWidth="0.3"
-              />
-            </svg>
+  if (!closed) {
+    return (
+      <section
+        className={`error-window ${props.id}`}
+        style={{
+          maxWidth: props.width,
+        }}
+      >
+        <div className="error-navbar">
+          <div className="error-title">
+            <h1>{props.errorName}</h1>
           </div>
-          <p>{innerText}</p>
+          <button className="error-close" onClick={closeWindow}></button>
         </div>
-        <div className="error-buttons">{errorButtonList}</div>
-      </div>
-    </section>
-  )
+        <div className="error-window-content">
+          <div className="error-top-content">
+            <div className="error-cross">
+              <svg
+                className="cross"
+                xmlns="http://www.w3.org/2000/svg"
+                width="16px"
+                height="16px"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M 15.99 14.54C 15.99 14.54 14.54 15.99 14.54 15.99 14.54 15.99 8 9.45 8 9.45 8 9.45 1.46 15.99 1.46 15.99 1.46 15.99 0.01 14.54 0.01 14.54 0.01 14.54 6.55 8 6.55 8 6.55 8 0.01 1.46 0.01 1.46 0.01 1.46 1.46 0.01 1.46 0.01 1.46 0.01 8 6.55 8 6.55 8 6.55 14.54 0.01 14.54 0.01 14.54 0.01 15.99 1.46 15.99 1.46 15.99 1.46 9.45 8 9.45 8 9.45 8 15.99 14.54 15.99 14.54Z"
+                  fill="white"
+                  stroke="white"
+                  strokeWidth="0.3"
+                />
+              </svg>
+            </div>
+            <p>{innerText}</p>
+          </div>
+          <div className="error-buttons">{errorButtonList}</div>
+        </div>
+      </section>
+    )
+  } else {
+    return (
+      <section
+        className={`error-window ${props.id}`}
+        style={{
+          width: width,
+          height: height,
+          backgroundColor: 'transparent',
+          border: 'none',
+          boxShadow: 'none',
+        }}
+      ></section>
+    )
+  }
 }

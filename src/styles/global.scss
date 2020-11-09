@@ -11,9 +11,8 @@ html {
   background:$lightgrey;
   font-family: 'Prata';
   overflow-x: hidden;
-
-  
 }
+
 li {
   text-decoration: underline;
 }
@@ -27,7 +26,7 @@ a {
   position: relative;
   background: $lightgrey;
   width: 100vw;
-  background-size: 1.98rem 1.98rem;
+  background-size: 2rem 2rem;
   background-image:
     linear-gradient(to right, $black 1px, transparent 1px),
     linear-gradient(to bottom, $black 1px, transparent 1px);
@@ -243,22 +242,49 @@ a {
 
 .nine {
   margin: auto;
-  margin-bottom: 3.4rem;
+  margin-bottom: 2.2rem;
   left: 20vw;
   .window-content{
     top: -1rem;
   }
 }
 
-.tetris {
-  border: 2px solid;
-  width: calc(70rem - 10px);
-  height: calc(40rem - 2px);
+.wrapper {
   position: relative;
-  background-color: $darkgrey;
-  opacity: 0.6;
+  display: flex;
+}
+
+.canvas-wrapper{
+  outline: 1px solid black;
+  left: 20rem;
+  top: -1rem;
+  width: 30rem;
+  height: 40rem;
+  position: relative;
+  background-color: none;
+  //opacity: 0.6;
+}
+
+.tetris {
+  width: 100%;
+  height: 100%;
 }
 
 .windows img {
   width: 100%;
+}
+
+.tetris-button {
+  font-family: 'Silom';
+  outline: none;
+  margin-left: 2rem;
+  border: 2px solid $black;
+  position: relative;
+  float: right;
+  width: 5rem;
+  height: 5rem;
+  
+  background: $darkgrey;
+  box-shadow: -10px 10px 0 $shadow;
+  right: -20rem;
 }

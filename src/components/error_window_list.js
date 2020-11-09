@@ -15,34 +15,22 @@ export default function ErrorWindowList(props) {
     'Where is the nearest exit?',
   ]
   const [array, setArray] = useState([questions[0]])
-  const [count, setCount] = useState(1)
 
   function getRandom(questions) {
     return questions[Math.floor(Math.random() * questions.length)]
   }
 
-  console.log(array.map(item => item))
-
   function clickHandler() {
     setArray(array => array.concat(getRandom(questions)))
-    setCount(count => ++count)
   }
 
-  function randomMoverLeft() {
-    return `${-Math.random() * 5 + 60}vw`
-  }
-
-  function randomMoverTop() {
-    if (array.length === 2) return '-20rem'
-    else return `${Math.random() * 5 - 20}rem`
-  }
-
-  const errorWindows = array.map(item => {
+  const errorWindows = array.map((item, index) => {
     return (
       <Draggable handle=".error-navbar">
         <div className="box no-cursor">
           <ErrorWindow
             id={props.id}
+            key={index}
             errorName={props.errorName}
             innerText={item}
             buttonText={props.buttonText}

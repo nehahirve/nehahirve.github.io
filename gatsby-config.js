@@ -7,18 +7,10 @@
 module.exports = {
   plugins: [
     {
-      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      resolve: `gatsby-plugin-google-fonts`,
       options: {
-        fonts: [
-          {
-            family: `Prata`,
-            variants: [`400`],
-          },
-          {
-            family: `Input Mono`,
-            variants: [`400`],
-          },
-        ],
+        fonts: ['Prata', 'Input Mono'],
+        display: 'swap',
       },
     },
   ],
