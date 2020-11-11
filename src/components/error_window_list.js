@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import Draggable from 'react-draggable'
 import ErrorWindow from './error_window'
+import soundfile from '../../static/error.mp3'
 
 export default function ErrorWindowList(props) {
   const questions = [
@@ -14,47 +15,50 @@ export default function ErrorWindowList(props) {
     'Would you like to view Windows Help?',
     'Where is the nearest exit?',
   ]
-  const [array, setArray] = useState([questions[0]])
+  const [array, setArray] = useState([getRandom(questions)])
+  const [left, setLeft] = useState([range(0, 80)])
+  const [top, setTop] = useState([range(-20, -20)])
 
   function getRandom(questions) {
     return questions[Math.floor(Math.random() * questions.length)]
   }
+  function range(min, max) {
+    return Math.random() * (max - min) + min
+  }
 
   function clickHandler() {
+    const audio = new Audio(soundfile)
+    audio.play()
     setArray(array => array.concat(getRandom(questions)))
+    setLeft(array => array.concat(range(0, 80)))
+    setTop(array => array.concat(range(-30, 0)))
   }
 
   const errorWindows = array.map((item, index) => {
     return (
-      <Draggable handle=".error-navbar">
-        <div className="box no-cursor">
-          <ErrorWindow
-            id={props.id}
-            key={index}
-            errorName={props.errorName}
-            innerText={item}
-            buttonText={props.buttonText}
-            width={props.width}
-            onIDKClick={clickHandler}
-          />
-        </div>
-      </Draggable>
+      <ErrorWindow
+        id={props.id}
+        key={index}
+        errorName={props.errorName}
+        innerText={item}
+        buttonText={props.buttonText}
+        width={props.width}
+        onIDKClick={clickHandler}
+        left={left[index]}
+        top={top[index]}
+      />
     )
   })
 
   if (props.errorName !== 'Error!') {
     return (
-      <Draggable handle=".error-navbar">
-        <div className="box no-cursor">
-          <ErrorWindow
-            id={props.id}
-            errorName={props.errorName}
-            innerText={props.innerText}
-            buttonText={props.buttonText}
-            width={props.width}
-          />
-        </div>
-      </Draggable>
+      <ErrorWindow
+        id={props.id}
+        errorName={props.errorName}
+        innerText={props.innerText}
+        buttonText={props.buttonText}
+        width={props.width}
+      />
     )
   } else {
     return <>{errorWindows}</>

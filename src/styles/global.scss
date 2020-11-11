@@ -56,8 +56,11 @@ a {
       border: 0.1rem solid $black;
       cursor: pointer;
       &:focus {
-        outline: none
-        
+        border: 2px solid $black;
+       outline: none;
+      }
+      &:active {
+        transform: scale(1.2);
       }
     }
     .title {
@@ -167,7 +170,17 @@ a {
       border-radius: none;
       border: none;
       border: 1px solid;
+      .cross {
+        position: relative;
+        width: 100%;
+        height: 100%;
+      }
+      &:focus {
+        outline: 2px solid $black;
+      }
     }
+
+    
   }
   .error-window-content {
     .error-top-content {
@@ -206,6 +219,7 @@ a {
   display: flex;
   margin: auto;
   width: 70%;
+
   
 }
 
@@ -220,14 +234,22 @@ a {
   margin: auto;
   display: flex;
   box-shadow: -2px 2px 0 $shadow;
+  &:active {
+    transform: translate(-2px, 2px);
+    box-shadow: none;
+    outline: none;
+  }
+  &:focus {
+    outline: 2px solid $black;
+  }
 }
 
 .error-one {
-  position: absolute;
-  left: 60vw;
-  top: -20rem;
+  position: absolute; 
   margin-bottom: -10rem;
+  z-index: 100;
 }
+
 
 .error-two {
   position: relative;
@@ -287,4 +309,34 @@ a {
   background: $darkgrey;
   box-shadow: -10px 10px 0 $shadow;
   right: -20rem;
+  &:active {
+    transform: translate(-10px, 10px);
+    box-shadow: none;
+  }
 }
+
+.hand-container {
+  transform: rotate(30deg) translateX(30rem) translateY(-50rem);
+}
+
+.hand {
+  width: 30rem;
+  position: fixed;
+  right: 8rem;
+  top:-29rem;
+  filter: drop-shadow( 4px 7px 0px $shadow);
+}
+
+.big-red {
+  font-family: 'Silom';
+  width: 10rem;
+  height: 10rem;
+  border: 1px solid black;
+  border-radius: 50%;
+  background: $red;
+  position: fixed;
+  right: 20rem;
+  top: 20rem;
+  box-shadow: -5px 6px 0px $shadow;
+}
+
