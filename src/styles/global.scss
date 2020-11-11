@@ -33,6 +33,7 @@ a {
 }
 
 .window-frame {
+  margin: 0;
   box-shadow: -10px 10px 0 $shadow;
   border: 1px solid $black;
   position: relative;
@@ -85,7 +86,7 @@ a {
 
 .one {
   top: 5rem;
-  margin: auto;
+  margin:  auto;
   margin-bottom: 8rem;
   left: -15vw;
 }
@@ -316,7 +317,9 @@ a {
 }
 
 .hand-container {
-  transform: rotate(30deg) translateX(30rem) translateY(-50rem);
+  
+  position: relative;
+  transform: rotate(30deg) translateX(10rem) translateY(-90rem);
 }
 
 .hand {
@@ -329,6 +332,8 @@ a {
 
 .big-red {
   font-family: 'Silom';
+  
+  position: absolute;
   width: 10rem;
   height: 10rem;
   border: 1px solid black;
@@ -338,5 +343,12 @@ a {
   right: 20rem;
   top: 20rem;
   box-shadow: -5px 6px 0px $shadow;
+  &:focus {
+    outline: none;
+    
+  }
+  &:active {
+    outline: none;
+    transform: scale(1.4);
+  }
 }
-

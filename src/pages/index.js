@@ -3,6 +3,7 @@ import Draggable from 'react-draggable'
 import ToggleableWindowFrame from '../components/toggleable_window_frame'
 import ErrorWindowList from '../components/error_window_list'
 import ButtonHand from '../components/button_hand'
+import FSButton from '../components/fs_button'
 import Gif from '../components/gif'
 import Devil from '../components/devil'
 import Canvas from '../components/canvas'
@@ -19,7 +20,6 @@ export default function Home() {
   return (
     <div className="application">
       <div className="background">
-        <ButtonHand />
         <Draggable handle=".title">
           <div className="box no-cursor">
             <ToggleableWindowFrame
@@ -34,6 +34,7 @@ export default function Home() {
             />
           </div>
         </Draggable>
+        <ButtonHand />
         <Draggable handle=".title">
           <div className="box no-cursor">
             <ToggleableWindowFrame
