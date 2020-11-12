@@ -2,4 +2,4 @@
 Personal portfolio showcasing my journey thus far.
 
 # tech
-Gatsby, ReactJS / JSX, Netlify, SCSS, P5.js, JAMStack
+Gatsby, ReactJS / JSX, SCSS, P5.js, JAMStack
