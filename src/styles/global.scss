@@ -11,6 +11,11 @@ html {
   background:$lightgrey;
   font-family: 'Prata';
   overflow-x: hidden;
+  cursor: -webkit-image-set(
+  url('../../static/cursor.svg') 1x,
+  url('../../static/cursor.svg') 2x
+  ), auto;
+
 }
 
 li {
@@ -40,7 +45,10 @@ a {
   //background-color: yellow;
   .navbar {
     margin: 0;
-    cursor: move;
+    cursor: -webkit-image-set(
+  url('../../static/move.svg') 1x,
+  url('../../static/move.svg') 2x
+  ), move;
     background: $lightgrey;
     font-family: 'Silom';
     height: 2.5rem;
@@ -55,7 +63,10 @@ a {
       height: 20px;
       border-radius: 50%;
       border: 0.1rem solid $black;
-      cursor: pointer;
+      cursor: -webkit-image-set(
+  url('../../static/pointer.svg') 1x,
+  url('../../static/pointer.svg') 2x
+  ), pointer;
       &:focus {
         border: 2px solid $black;
        outline: none;
@@ -79,7 +90,7 @@ a {
   .window-content {
     height: calc(100% - 2.5rem);
     padding: 2rem 1rem 0 3rem;
-    line-height: 0.84;
+    line-height: 1;
     position: relative;
   }
 }
@@ -119,7 +130,7 @@ a {
   left: 5vw;
   margin-bottom: 5rem;
   .window-content {
-    line-height: 0.95;
+    line-height: 1.2;
   }
 }
 
@@ -139,7 +150,7 @@ a {
   margin-bottom: 4rem;
   .window-content{
     overflow-y: scroll;
-    line-height: 0.95;
+    line-height: 1.2;
   }
 }
 .error-window {
@@ -150,7 +161,10 @@ a {
   border: 1px solid;
   
   .error-navbar {
-    cursor: move;
+    cursor: -webkit-image-set(
+  url('../../static/pointer.svg') 1x,
+  url('../../static/pointer.svg') 2x
+  ), move;
     background: $blue;
     border-bottom: 1px solid;
     height: 1.5rem;
@@ -225,7 +239,10 @@ a {
 }
 
 .error-enter {
-  cursor: pointer;
+  cursor: -webkit-image-set(
+  url('../../static/pointer.svg') 1x,
+  url('../../static/pointer.svg') 2x
+  ), pointer;
   background: $darkgrey;
   font-family: 'Silom';
   border-radius: none;
@@ -269,6 +286,7 @@ a {
   left: 20vw;
   .window-content{
     top: -1rem;
+    line-height:1;
   }
 }
 

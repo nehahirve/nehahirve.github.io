@@ -26,7 +26,7 @@ export default function Home() {
               id={'one'}
               color={yellow}
               innerText={`Greetings, internet explorer. I’m Neha Hirve.`}
-              fontSize="6rem"
+              fontSize="5.2rem"
               width="35rem"
               height="31rem"
               windowHeading="INTRO.txt"
@@ -85,7 +85,7 @@ export default function Home() {
                   <Gif />
                 </>
               }
-              fontSize="4.3rem"
+              fontSize="4.2rem"
               width="35rem"
               height="31rem"
               windowHeading="COVID.exe"
@@ -112,7 +112,7 @@ export default function Home() {
                   Stockholm. Luckily I love to code.
                 </>
               }
-              fontSize="3.8rem"
+              fontSize="3.4rem"
               width="35rem"
               height="31rem"
               windowHeading="PIVOT.txt"
@@ -133,9 +133,9 @@ export default function Home() {
                     made.
                   </>
                 }
-                fontSize="3.8rem"
+                fontSize="3.6rem"
                 width="25rem"
-                height="25rem"
+                height="20rem"
                 windowHeading="WORK.txt"
                 isOpen={true}
               />
@@ -156,9 +156,9 @@ export default function Home() {
                     .
                   </>
                 }
-                fontSize="3.8rem"
+                fontSize="3.6rem"
                 width="25rem"
-                height="25rem"
+                height="20rem"
                 windowHeading="WORK.txt"
                 isOpen={true}
               />
@@ -179,7 +179,7 @@ export default function Home() {
                     I made with other humans.
                   </>
                 }
-                fontSize="3.8rem"
+                fontSize="3.6rem"
                 width="25rem"
                 height="25rem"
                 windowHeading="WORK.txt"

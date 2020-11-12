@@ -2,23 +2,22 @@ import React, { useState } from 'react'
 import Draggable from 'react-draggable'
 
 export default function FSButton(props) {
-  function sayHello(e) {
-    let element = e.target.parentNode.parentNode.parentNode.parentNode
-    if (element.requestFullscreen) {
-      element.requestFullscreen()
-    } else if (element.mozRequestFullScreen) {
-      element.mozRequestFullScreen()
-    } else if (element.webkitRequestFullscreen) {
-      element.webkitRequestFullscreen()
-    } else if (element.msRequestFullscreen) {
-      element.msRequestFullscreen()
+  function toggle() {
+    if (document.fullscreenElement) {
+      document
+        .exitFullscreen()
+        .then(() => console.log('Document Exited form Full screen mode'))
+        .catch(err => console.error(err))
+    } else {
+      document.documentElement.requestFullscreen()
+      document.documentElement.webkitRequestFullscreen()
     }
   }
 
   return (
     <Draggable handle="button">
       <div className="box">
-        <button className="big-red" onClick={sayHello}>
+        <button className="big-red" onClick={toggle}>
           FULL_SCREEN.EXE
         </button>
       </div>
