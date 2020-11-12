@@ -8,6 +8,11 @@ let killedRowCounter = 0
 let level = 1
 const canvas = document.querySelector('.tetris')
 const ctx = canvas.getContext('2d')
+const wrapper = document.querySelector('.canvas-wrapper')
+let H = document.documentElement.offsetHeight / rem(2)
+let R = H - Math.floor(H)
+//wrapper.style.top = `-${rem(2) - rem(R)}px`
+console.log(rem(R))
 
 let counter = 0
 let fps = 24

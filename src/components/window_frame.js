@@ -1,15 +1,11 @@
 import React from 'react'
 import { loadableP5 as P5Wrapper } from './loadable'
-import Sketch from './sketch'
+import Sketch2 from './sketch_2'
 
 export default function WindowFrame(props) {
-  let windowContent = (
-    <div className="window-content" style={{ fontSize: props.fontSize }}>
-      {props.innerText}
-    </div>
-  )
+  let windowContent = <div className="window-content">{props.innerText}</div>
   if (props.id === 'p5') {
-    windowContent = <P5Wrapper sketch={Sketch} />
+    windowContent = <P5Wrapper sketch={Sketch2} />
   }
   return (
     <section

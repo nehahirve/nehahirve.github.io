@@ -20,7 +20,6 @@ export default function ToggleableWindowFrame(props) {
         windowHeading={props.windowHeading}
         height={props.height}
         width={props.width}
-        fontSize={props.fontSize}
         innerText={props.innerText}
         onWindowClose={closeWindow}
       />
@@ -33,7 +32,6 @@ export default function ToggleableWindowFrame(props) {
         windowHeading={props.windowHeading}
         height={props.height}
         width={props.width}
-        fontSize={props.fontSize}
         innerText={props.innerText}
         onWindowOpen={openWindow}
       />

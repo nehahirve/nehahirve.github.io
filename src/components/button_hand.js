@@ -1,5 +1,5 @@
 import React from 'react'
-import hand from '../../static/SVG/hand.svg'
+import hand from '../../static/hand.svg'
 import Anime, { anime } from 'react-anime'
 import FSButton from './fs_button'
 import Draggable from 'react-draggable'

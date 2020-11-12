@@ -8,13 +8,14 @@ $blue: #015EAC;
 $shadow: rgba(0, 0, 0, 0.4);
 
 html {
+  user-select: none;
   background:$lightgrey;
   font-family: 'Prata';
   overflow-x: hidden;
   cursor: -webkit-image-set(
   url('../../static/cursor.svg') 1x,
   url('../../static/cursor.svg') 2x
-  ), auto;
+  ) 10 0,  auto;
 
 }
 
@@ -23,8 +24,25 @@ li {
 }
 
 a {
-  text-decoration: underline;
+  text-decoration: none;
   color: inherit;
+  cursor: -webkit-image-set(
+    url('../../static/pointer.svg') 1x,
+    url('../../static/pointer.svg') 2x
+    ) 50 0, pointer;
+
+
+}
+
+a {
+  background-image: linear-gradient(120deg, $lightgrey 0%, $lightgrey 100%);
+  background-repeat: no-repeat;
+  background-size: 100% 0.1em;
+  background-position: 0 88%;
+  transition: background-size 0.25s ease-in;
+  &:hover {
+    background-size: 100% 70%;
+  }
 }
 
 .background {
@@ -45,10 +63,8 @@ a {
   //background-color: yellow;
   .navbar {
     margin: 0;
-    cursor: -webkit-image-set(
-  url('../../static/move.svg') 1x,
-  url('../../static/move.svg') 2x
-  ), move;
+  font-size: 1rem;
+    
     background: $lightgrey;
     font-family: 'Silom';
     height: 2.5rem;
@@ -66,7 +82,7 @@ a {
       cursor: -webkit-image-set(
   url('../../static/pointer.svg') 1x,
   url('../../static/pointer.svg') 2x
-  ), pointer;
+  ) 50 0, pointer;
       &:focus {
         border: 2px solid $black;
        outline: none;
@@ -76,6 +92,10 @@ a {
       }
     }
     .title {
+      cursor: -webkit-image-set(
+  url('../../static/move.svg') 1x,
+  url('../../static/move.svg') 2x
+  ) 50 50, move;
       display: flex;
       justify-content: space-evenly;
       width: 100%;
@@ -96,20 +116,25 @@ a {
 }
 
 .one {
-  top: 5rem;
+  font-size: 5.2rem;
+  top: 5rem;  
   margin:  auto;
   margin-bottom: 8rem;
   left: -15vw;
 }
 
 .p5 {
+  font-size: 4.3rem;
   top: 5rem;
   margin: auto;
   margin-bottom: -8rem;
   left: -25vw;
+  overflow: hidden;
 }
 
 .two {
+  font-size: 4.3rem;
+
   margin: auto;
   margin-bottom: -10rem;
   left: 15vw;
@@ -117,6 +142,8 @@ a {
 }
 
 .three {
+  font-size: 4.2rem;
+
   margin: auto;
   margin-bottom: 5rem;
   left: -12vw;
@@ -126,12 +153,19 @@ a {
 }
 
 .four {
+  font-size: 3.4rem;
+
   margin: auto;
   left: 5vw;
   margin-bottom: 5rem;
   .window-content {
     line-height: 1.2;
   }
+}
+
+.five, .seven {
+  font-size: 3.6rem;
+
 }
 
 #work {
@@ -143,9 +177,12 @@ a {
 }
 .six {
   top: 15rem;
+  font-size: 3.6rem;
+
 }
 
 .eight {
+  font-size: 3.6rem;
   margin: auto;
   margin-bottom: 4rem;
   .window-content{
@@ -153,6 +190,7 @@ a {
     line-height: 1.2;
   }
 }
+
 .error-window {
   box-shadow: -10px 10px 0 $shadow;
   background: $darkgrey;
@@ -162,9 +200,9 @@ a {
   
   .error-navbar {
     cursor: -webkit-image-set(
-  url('../../static/pointer.svg') 1x,
-  url('../../static/pointer.svg') 2x
-  ), move;
+  url('../../static/move.svg') 1x,
+  url('../../static/move.svg') 2x
+  ) 50 50, move;
     background: $blue;
     border-bottom: 1px solid;
     height: 1.5rem;
@@ -178,6 +216,10 @@ a {
 
     }
     .error-close {
+      cursor: -webkit-image-set(
+  url('../../static/pointer.svg') 1x,
+  url('../../static/pointer.svg') 2x
+  ) 50 0, pointer;
       height: 1.3rem;
       width: 1.3rem;
       margin-right: 0.1rem;
@@ -192,6 +234,9 @@ a {
       }
       &:focus {
         outline: 2px solid $black;
+      }
+      &:hover {
+        background: $lightgrey;
       }
     }
 
@@ -234,7 +279,10 @@ a {
   display: flex;
   margin: auto;
   width: 70%;
-
+  cursor: -webkit-image-set(
+    url('../../static/pointer.svg') 1x,
+    url('../../static/pointer.svg') 2x
+    ) 50 0, pointer;
   
 }
 
@@ -242,7 +290,7 @@ a {
   cursor: -webkit-image-set(
   url('../../static/pointer.svg') 1x,
   url('../../static/pointer.svg') 2x
-  ), pointer;
+  ) 50 0, pointer;
   background: $darkgrey;
   font-family: 'Silom';
   border-radius: none;
@@ -259,6 +307,9 @@ a {
   }
   &:focus {
     outline: 2px solid $black;
+  }
+  &:hover {
+    background: $lightgrey;
   }
 }
 
@@ -281,6 +332,8 @@ a {
 }
 
 .nine {
+  font-size: 1rem;
+
   margin: auto;
   margin-bottom: 2.2rem;
   left: 20vw;
@@ -296,9 +349,9 @@ a {
 }
 
 .canvas-wrapper{
-  outline: 1px solid black;
+  outline: 2px solid black;
   left: 20rem;
-  top: -1rem;
+  top: calc(-1rem);
   width: 30rem;
   height: 40rem;
   position: relative;
@@ -316,6 +369,10 @@ a {
 }
 
 .tetris-button {
+  cursor: -webkit-image-set(
+  url('../../static/pointer.svg') 1x,
+  url('../../static/pointer.svg') 2x
+  ) 50 0, pointer;
   font-family: 'Silom';
   outline: none;
   margin-left: 2rem;
@@ -331,6 +388,9 @@ a {
   &:active {
     transform: translate(-10px, 10px);
     box-shadow: none;
+  }
+  &:hover {
+    background: $lightgrey;
   }
 }
 
@@ -350,7 +410,10 @@ a {
 
 .big-red {
   font-family: 'Silom';
-  
+  cursor: -webkit-image-set(
+  url('../../static/pointer.svg') 1x,
+  url('../../static/pointer.svg') 2x
+  ) 50 0, pointer;
   position: absolute;
   width: 10rem;
   height: 10rem;
@@ -369,4 +432,74 @@ a {
     outline: none;
     transform: scale(1.4);
   }
+}
+
+@media only screen and (max-width: 800px) {
+
+  .window-frame,  .box, .window-content {
+    display: block;
+    padding: 0;
+    position: static;
+    margin: auto;
+    width: 95vw;
+    margin-bottom: 2rem;
+    
+    .p5 {
+      display: none;
+    }
+  }
+.background {
+  padding-top : 1rem;
+}
+  .error-two, .error-three {
+    display: block;
+    position: static;
+    margin: auto;
+    
+    width: 95vw;
+    margin-bottom: 2rem;
+  }
+
+  .window-content{
+    font-size: 3rem;
+  }
+
+  .hand-container {
+    display: none;
+  }
+
+  #work {
+    width: 95vw;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+  }
+
+  .wrapper, .nine {
+    display: none;
+  }
+
+  .eight .window-content{
+    font-size: 2rem;
+    width: 100%;
+    
+  }
+
+  .four {
+    margin: auto;
+    .window-content{
+      font-size: 3rem;
+      padding-left: 1rem;
+      overflow-y: scroll;
+      line-height: 1.2;
+    }
+  }
+
+  .one, .two, .three, .five, .six, .seven {
+    .window-content{
+      padding-left: 1rem;
+    }
+  }
+  
 }

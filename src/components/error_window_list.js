@@ -14,6 +14,10 @@ export default function ErrorWindowList(props) {
     'Are you even connected to the internet right now?',
     'Would you like to view Windows Help?',
     'Where is the nearest exit?',
+    'Would you like to destroy all your documents?',
+    'Who are you?',
+    'Can you feel your left foot?',
+    'Do you believe in Asparagus?',
   ]
   const [array, setArray] = useState([getRandom(questions)])
   const [left, setLeft] = useState([range(0, 80)])

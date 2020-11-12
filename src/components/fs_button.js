@@ -1,47 +1,32 @@
 import React, { useState } from 'react'
 import Draggable from 'react-draggable'
 
-export default function FSButton(props) {
-  function toggle() {
-    if (document.fullscreenElement) {
-      document
-        .exitFullscreen()
-        .then(() => console.log('Document Exited form Full screen mode'))
-        .catch(err => console.error(err))
-    } else {
-      document.documentElement.requestFullscreen()
-      document.documentElement.webkitRequestFullscreen()
-    }
+export class FSButton extends React.Component {
+  constructor(props) {
+    super(props)
   }
 
-  return (
-    <Draggable handle="button">
-      <div className="box">
-        <button className="big-red" onClick={toggle}>
-          FULL_SCREEN.EXE
-        </button>
-      </div>
-    </Draggable>
-  )
+  componentDidMount() {
+    const script = document.createElement('script')
+
+    script.src = `bsod.js`
+
+    script.async = false
+
+    document.body.appendChild(script)
+
+    document.body.removeChild(script) // remove it so in each time you visit this route it won't create new script and append it to </body> this should work just fine.
+  }
+
+  render() {
+    return (
+      <Draggable handle="button">
+        <div className="box">
+          <button className="big-red">DO_NOT_PRESS.EXE</button>
+        </div>
+      </Draggable>
+    )
+  }
 }
 
-// export class FSButton extends React.Component {
-//   constructor(props) {
-//     super(props)
-//     this.test = this.test.bind(this)
-//   }
-
-//   test() {
-//     console.log('hello')
-//   }
-
-//   render() {
-//     return (
-//       <button className="big-red" onClick={this.test}>
-//         FULL_SCREEN.EXE
-//       </button>
-//     )
-//   }
-// }
-
-// export default FSButton
+export default FSButton
