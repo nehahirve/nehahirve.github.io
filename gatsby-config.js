@@ -5,6 +5,7 @@
  */
 
 module.exports = {
+  pathPrefix: '/portfolio',
   plugins: [
     {
       resolve: `gatsby-plugin-google-fonts`,
