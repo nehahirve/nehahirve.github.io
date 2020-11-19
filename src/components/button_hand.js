@@ -1,17 +1,9 @@
 import React from 'react'
 import hand from '../../static/hand.svg'
-import Anime, { anime } from 'react-anime'
+import Anime from 'react-anime'
 import FSButton from './fs_button'
-import Draggable from 'react-draggable'
 
 export default function ButtonHand(props) {
-  function fullScreenParent(e) {
-    //e.preventDefault()
-
-    console.log('this is the parent')
-    //launchIntoFullscreen(e.target)
-  }
-
   return (
     <Anime
       easing="easeInOutQuad"

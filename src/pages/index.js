@@ -3,7 +3,6 @@ import Draggable from 'react-draggable'
 import ToggleableWindowFrame from '../components/toggleable_window_frame'
 import ErrorWindowList from '../components/error_window_list'
 import ButtonHand from '../components/button_hand'
-import FSButton from '../components/fs_button'
 import Gif from '../components/gif'
 import Devil from '../components/devil'
 import Canvas from '../components/canvas'
@@ -57,7 +56,9 @@ export default function Home() {
               innerText={
                 <>
                   I used to be a{' '}
-                  <a href="https://nehahirve.github.io/">visual storyteller</a>{' '}
+                  <a href="https://nehahirve.github.io/photography">
+                    visual storyteller
+                  </a>{' '}
                   and sometimes-indie-
                   <a href="https://lavamousestudios.com/">poster-maker</a>.
                 </>

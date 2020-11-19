@@ -1,11 +1,7 @@
-import React, { useState } from 'react'
+import React from 'react'
 import Draggable from 'react-draggable'
 
 export class FSButton extends React.Component {
-  constructor(props) {
-    super(props)
-  }
-
   componentDidMount() {
     const script = document.createElement('script')
 
