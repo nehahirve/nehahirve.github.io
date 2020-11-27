@@ -11,7 +11,7 @@ export default function ErrorWindow(props) {
   function clickHandler(e) {
     e.preventDefault()
     if (e.target.textContent === 'LINKEDIN') {
-      setText(`Workin' on it...`)
+      window.location = 'https://www.linkedin.com/in/neha-hirve-35064672/'
       console.log(innerText)
     } else if (e.target.textContent === 'GITHUB') {
       window.location = 'https://github.com/nehahirve/'

@@ -29,7 +29,7 @@ a {
   cursor: -webkit-image-set(
     url('../../static/pointer.svg') 1x,
     url('../../static/pointer.svg') 2x
-    ) 50 0, pointer;
+    ) 0 0, pointer;
 
 
 }
@@ -82,7 +82,7 @@ a {
       cursor: -webkit-image-set(
   url('../../static/pointer.svg') 1x,
   url('../../static/pointer.svg') 2x
-  ) 50 0, pointer;
+  ) 20 0, pointer;
       &:focus {
         border: 2px solid $black;
        outline: none;
@@ -95,7 +95,7 @@ a {
       cursor: -webkit-image-set(
   url('../../static/move.svg') 1x,
   url('../../static/move.svg') 2x
-  ) 50 50, move;
+  ) 25 25, move;
       display: flex;
       justify-content: space-evenly;
       width: 100%;
@@ -202,7 +202,7 @@ a {
     cursor: -webkit-image-set(
   url('../../static/move.svg') 1x,
   url('../../static/move.svg') 2x
-  ) 50 50, move;
+  ) 20 20, move;
     background: $blue;
     border-bottom: 1px solid;
     height: 1.5rem;
@@ -219,7 +219,7 @@ a {
       cursor: -webkit-image-set(
   url('../../static/pointer.svg') 1x,
   url('../../static/pointer.svg') 2x
-  ) 50 0, pointer;
+  ) 20 0, pointer;
       height: 1.3rem;
       width: 1.3rem;
       margin-right: 0.1rem;
@@ -282,7 +282,7 @@ a {
   cursor: -webkit-image-set(
     url('../../static/pointer.svg') 1x,
     url('../../static/pointer.svg') 2x
-    ) 50 0, pointer;
+    ) 20 0, pointer;
   
 }
 
@@ -290,7 +290,7 @@ a {
   cursor: -webkit-image-set(
   url('../../static/pointer.svg') 1x,
   url('../../static/pointer.svg') 2x
-  ) 50 0, pointer;
+  ) 20 0, pointer;
   background: $darkgrey;
   font-family: 'Silom';
   border-radius: none;
@@ -372,7 +372,7 @@ a {
   cursor: -webkit-image-set(
   url('../../static/pointer.svg') 1x,
   url('../../static/pointer.svg') 2x
-  ) 50 0, pointer;
+  ) 20 0, pointer;
   font-family: 'Silom';
   outline: none;
   margin-left: 2rem;
@@ -413,7 +413,7 @@ a {
   cursor: -webkit-image-set(
   url('../../static/pointer.svg') 1x,
   url('../../static/pointer.svg') 2x
-  ) 50 0, pointer;
+  ) 20 0, pointer;
   position: absolute;
   width: 10rem;
   height: 10rem;
