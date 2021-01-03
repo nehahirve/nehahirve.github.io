@@ -138,7 +138,7 @@ export default function Home() {
                 }
                 fontSize="3.6rem"
                 width="25rem"
-                height="20rem"
+                height="25rem"
                 windowHeading="WORK.txt"
                 isOpen={true}
               />
@@ -153,7 +153,7 @@ export default function Home() {
                 innerText={
                   <>
                     Here’s some{' '}
-                    <a href="https://github.com/nehahirve/audiosun">
+                    <a href="https://nehahirve.github.io/audiosun/">
                       other stuff I made alone
                     </a>
                     .
@@ -161,7 +161,7 @@ export default function Home() {
                 }
                 fontSize="3.6rem"
                 width="25rem"
-                height="20rem"
+                height="25rem"
                 windowHeading="WORK.txt"
                 isOpen={true}
               />
@@ -184,7 +184,7 @@ export default function Home() {
                 }
                 fontSize="3.6rem"
                 width="25rem"
-                height="25rem"
+                height="20rem"
                 windowHeading="WORK.txt"
                 isOpen={true}
               />
