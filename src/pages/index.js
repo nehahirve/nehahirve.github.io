@@ -130,8 +130,10 @@ export default function Home() {
                 innerText={
                   <>
                     Here’s some{' '}
-                    <a href="https://nehahirve.github.io/audiosun/">stuff</a> I
-                    made.
+                    <a href="https://nehahirve.github.io/tweeterlator/">
+                      stuff
+                    </a>{' '}
+                    I made with other humans.
                   </>
                 }
                 fontSize="3.6rem"
@@ -151,8 +153,8 @@ export default function Home() {
                 innerText={
                   <>
                     Here’s some{' '}
-                    <a href="https://github.com/nehahirve/criterion">
-                      more stuff
+                    <a href="https://github.com/nehahirve/audiosun">
+                      other stuff I made alone
                     </a>
                     .
                   </>
@@ -173,11 +175,11 @@ export default function Home() {
                 color={green}
                 innerText={
                   <>
-                    Here’s the{' '}
-                    <a href="https://nehahirve.github.io/mothership/">
-                      first stuff
+                    Here’s a link to{' '}
+                    <a href="https://github.com/nehahirve/repositories">
+                      all of the stuff
                     </a>{' '}
-                    I made with other humans.
+                    .
                   </>
                 }
                 fontSize="3.6rem"
