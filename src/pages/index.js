@@ -175,11 +175,9 @@ export default function Home() {
                 color={green}
                 innerText={
                   <>
-                    Here’s a link to{' '}
-                    <a href="https://github.com/nehahirve/repositories">
-                      all of the stuff
-                    </a>{' '}
-                    .
+                    Here’s
+                    <a href="http://openshopfilm.com/">stuff we made</a> for
+                    other humans.
                   </>
                 }
                 fontSize="3.6rem"
@@ -194,7 +192,7 @@ export default function Home() {
         <ErrorWindowList
           id={'error-two'}
           errorName="Not an Error!"
-          innerText="I even made this JAMStack site with Gatsby 0_0"
+          innerText="Here's a link to ALL OF THE STUFF 0_0"
           buttonText={['MUCH WOW']}
           width="25rem"
         />
