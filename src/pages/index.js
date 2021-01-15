@@ -129,16 +129,16 @@ export default function Home() {
                 color={yellow}
                 innerText={
                   <>
-                    Here’s some{' '}
-                    <a href="https://nehahirve.github.io/tweeterlator/">
-                      stuff
+                    First I{' '}
+                    <a href="https://nehahirve.github.io/audiosun/">
+                      made stuff
                     </a>{' '}
-                    I made with other humans.
+                    alone.
                   </>
                 }
                 fontSize="3.6rem"
                 width="25rem"
-                height="25rem"
+                height="20rem"
                 windowHeading="WORK.txt"
                 isOpen={true}
               />
@@ -152,9 +152,9 @@ export default function Home() {
                 color={blue}
                 innerText={
                   <>
-                    Here’s some{' '}
-                    <a href="https://nehahirve.github.io/audiosun/">
-                      other stuff I made alone
+                    Then I{' '}
+                    <a href="https://nehahirve.github.io/tweeterlator/">
+                      made stuff with other humans
                     </a>
                     .
                   </>
@@ -175,14 +175,14 @@ export default function Home() {
                 color={green}
                 innerText={
                   <>
-                    Here’s
-                    <a href="http://openshopfilm.com/">stuff we made</a> for
+                    Then we
+                    <a href="http://openshopfilm.com/"> made stuff </a> for
                     other humans.
                   </>
                 }
                 fontSize="3.6rem"
                 width="25rem"
-                height="20rem"
+                height="25rem"
                 windowHeading="WORK.txt"
                 isOpen={true}
               />
