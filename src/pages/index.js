@@ -205,9 +205,9 @@ export default function Home() {
                 <>
                   I’m interested in how the internet can emulate IRL
                   experiences, design-driven development, web animation, and{' '}
-                  <a href="https://nehahirve.github.io/platformgame/">games</a>.
-                  I’m teaching myself ReactJS and Node.js (b/c backend is the
-                  new black). I also{' '}
+                  <a href="https://escapefromhyperisland.github.io/pleasantville/level-6">games</a>.
+                  I’m teaching myself PHP and Node.js (b/c backend is the new
+                  black). I also{' '}
                   <a href="https://www.huckmag.com/art-and-culture/photography-2/tornado-alley-america-neha-hirve-photography-wild-hunt/">
                     chase tornadoes
                   </a>
