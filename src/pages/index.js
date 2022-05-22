@@ -108,7 +108,7 @@ export default function Home() {
               color={yellow}
               innerText={
                 <>
-                  Now I’m studying web development at{' '}
+                  So I studied web development at{' '}
                   <a href="https://www.hyperisland.com/">Hyper Island</a> in
                   Stockholm. Luckily I love to code.
                 </>
@@ -130,10 +130,10 @@ export default function Home() {
                 innerText={
                   <>
                     First I{' '}
-                    <a href="https://nehahirve.github.io/audiosun/">
-                      made stuff
-                    </a>{' '}
-                    alone.
+                    <a href="https://nehahirve.github.io/tweeterlator/">
+                      made stuff with other humans
+                    </a>
+                    .
                   </>
                 }
                 fontSize="3.6rem"
@@ -152,9 +152,9 @@ export default function Home() {
                 color={blue}
                 innerText={
                   <>
-                    Then I{' '}
-                    <a href="https://nehahirve.github.io/tweeterlator/">
-                      made stuff with other humans
+                    Then we{' '}
+                    <a href="https://open-shop-x-fun-crew.github.io/">
+                      made stuff for other humans
                     </a>
                     .
                   </>
@@ -175,9 +175,7 @@ export default function Home() {
                 color={green}
                 innerText={
                   <>
-                    Then we
-                    <a href="http://openshopfilm.com/"> made stuff </a> for
-                    other humans.
+                    Now I <a href="https://www.klarna.com/us/rewards/"> make full-stack stuff </a> for Klarna.
                   </>
                 }
                 fontSize="3.6rem"
@@ -206,8 +204,7 @@ export default function Home() {
                   I’m interested in how the internet can emulate IRL
                   experiences, design-driven development, web animation, and{' '}
                   <a href="https://escapefromhyperisland.github.io/pleasantville/level-6">games</a>.
-                  I’m teaching myself PHP and Node.js (b/c backend is the new
-                  black). I also{' '}
+                  I also{' '}
                   <a href="https://www.huckmag.com/art-and-culture/photography-2/tornado-alley-america-neha-hirve-photography-wild-hunt/">
                     chase tornadoes
                   </a>
