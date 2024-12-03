@@ -22,7 +22,7 @@ export default function ErrorWindow(props) {
     } else if (e.target.textContent === 'IDK') {
       props.onIDKClick()
     } else if (e.target.textContent === 'MUCH WOW') {
-      window.location = 'https://github.com/nehahirve/repositories'
+      window.location = 'https://github.com/nehahirve/'
     }
   }
 

@@ -7,6 +7,11 @@ $green: #00822A;
 $blue: #015EAC;
 $shadow: rgba(0, 0, 0, 0.4);
 
+
+
+
+
+
 html {
   user-select: none;
   background:$lightgrey;
@@ -16,7 +21,27 @@ html {
   url('../../static/cursor.svg') 1x,
   url('../../static/cursor.svg') 2x
   ) 10 0,  auto;
+}
 
+.hover-container {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.hover-container .hover-gif {
+  position: absolute;
+  top: -200%; /* Position the GIF above the text */
+  left: 70%;
+  transform: translateX(-70%);
+  width: 350px; /* Adjust size as needed */
+  height: auto;
+  display: none; /* Initially hide the GIF */
+  z-index: 10; /* Ensure it appears above other elements */
+}
+
+.hover-container:hover .hover-gif {
+  display: block; /* Show the GIF on hover */
 }
 
 li {
@@ -30,8 +55,6 @@ a {
     url('../../static/pointer.svg') 1x,
     url('../../static/pointer.svg') 2x
     ) 0 0, pointer;
-
-
 }
 
 a {
@@ -501,5 +524,9 @@ a {
       padding-left: 1rem;
     }
   }
+
+  
   
 }
+
+

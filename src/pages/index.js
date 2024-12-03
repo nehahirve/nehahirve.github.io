@@ -6,6 +6,7 @@ import ButtonHand from '../components/button_hand'
 import Gif from '../components/gif'
 import Devil from '../components/devil'
 import Canvas from '../components/canvas'
+import gif from '../../static/disaster.gif'
 
 //import '../styles/reset.css'
 //import '../styles/global.css'
@@ -60,7 +61,7 @@ export default function Home() {
                     visual storyteller
                   </a>{' '}
                   and sometimes-indie-
-                  <a href="https://lavamousestudios.com/">poster-maker</a>.
+                  <a href="https://nehahirve.github.io/lavamouse/">poster-maker</a>.
                 </>
               }
               fontSize="4.3rem"
@@ -78,11 +79,14 @@ export default function Home() {
               color={blue}
               innerText={
                 <>
-                  But then 2020{' '}
-                  <a href="https://www.boredpanda.com/2020-year-recap/?utm_source=google&utm_medium=organic&utm_campaign=organic">
-                    broke
-                  </a>{' '}
-                  stuff.
+                  But then {' '}
+                   <span className="hover-container">
+                   <a href="">2020 broke stuff</a>
+            <img
+              src={gif}
+              className="hover-gif"
+            />
+          </span>
                   <Gif />
                 </>
               }
@@ -108,9 +112,8 @@ export default function Home() {
               color={yellow}
               innerText={
                 <>
-                  So I studied web development at{' '}
-                  <a href="https://www.hyperisland.com/">Hyper Island</a> in
-                  Stockholm. Luckily I love to code.
+                  So I learnt to code. First I made stuff{' '}
+                  <a href="https://nehahirve.github.io/audiosun/">for myself</a>. 
                 </>
               }
               fontSize="3.4rem"
@@ -129,9 +132,9 @@ export default function Home() {
                 color={yellow}
                 innerText={
                   <>
-                    First I{' '}
-                    <a href="https://nehahirve.github.io/tweeterlator/">
-                      made stuff with other humans
+                    Then I{' '}
+                    <a href="https://open-shop-x-fun-crew.github.io/">
+                      made stuff for other humans
                     </a>
                     .
                   </>
@@ -152,9 +155,9 @@ export default function Home() {
                 color={blue}
                 innerText={
                   <>
-                    Then we{' '}
-                    <a href="https://open-shop-x-fun-crew.github.io/">
-                      made stuff for other humans
+                    Then I worked in a{' '}
+                    <a href="https://www.klarna.com/international/press/klarna-makes-shopping-more-rewarding/">
+                      large company
                     </a>
                     .
                   </>
@@ -162,7 +165,7 @@ export default function Home() {
                 fontSize="3.6rem"
                 width="25rem"
                 height="25rem"
-                windowHeading="WORK.txt"
+                windowHeading="$$$.txt"
                 isOpen={true}
               />
             </div>
@@ -175,13 +178,13 @@ export default function Home() {
                 color={green}
                 innerText={
                   <>
-                    Now I <a href="https://www.klarna.com/us/rewards/"> make full-stack stuff </a> for Klarna.
+                    Now I <a href="https://www.alextherapeutics.com/therapy-companions"> make apps</a> in a tiny one.
                   </>
                 }
                 fontSize="3.6rem"
                 width="25rem"
                 height="25rem"
-                windowHeading="WORK.txt"
+                windowHeading="Start.up"
                 isOpen={true}
               />
             </div>
@@ -210,11 +213,9 @@ export default function Home() {
                   </a>
                   , have lived in 5 countries and a{' '}
                   <a href="https://www.npr.org/sections/pictureshow/2019/10/20/737787659/activists-occupy-an-ancient-forest-in-germany-to-save-it?t=1604566479839">
-                    treehouse
+                    treehouse,{" "}
                   </a>
-                  , and enjoy watching{' '}
-                  <a href="https://youtu.be/2BmGMi0IEx4">this man</a> restore
-                  retro game consoles on YouTube.
+                  but these days I climb rocks instead of trees.
                 </>
               }
               fontSize="3.6rem"
