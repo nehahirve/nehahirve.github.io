@@ -14,7 +14,7 @@ export default function ErrorWindow(props) {
       window.location = 'https://www.linkedin.com/in/neha-hirve-35064672/'
       console.log(innerText)
     } else if (e.target.textContent === 'GITHUB') {
-      window.location = 'https://github.com/nehahirve/'
+      window.location = 'https://github.com/nehahirve92/'
     } else if (e.target.textContent === 'INSTA') {
       window.location = 'https://www.instagram.com/nehahirve/'
     } else if (e.target.textContent === 'EMAIL') {
@@ -22,7 +22,7 @@ export default function ErrorWindow(props) {
     } else if (e.target.textContent === 'IDK') {
       props.onIDKClick()
     } else if (e.target.textContent === 'MUCH WOW') {
-      window.location = 'https://github.com/nehahirve/'
+      window.location = 'https://github.com/nehahirve92/'
     }
   }
 
